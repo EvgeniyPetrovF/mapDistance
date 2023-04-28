@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   subContainer: {
-    height: 300,
+    height: 500,
     width: '100%',
     paddingHorizontal: dimensions.offset.small,
   },

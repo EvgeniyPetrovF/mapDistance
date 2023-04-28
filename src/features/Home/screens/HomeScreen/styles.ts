@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
   listContainer: {
     flex: 1,
     marginVertical: dimensions.offset.normal,
+    paddingHorizontal: dimensions.offset.normal,
   },
   listItemContainer: {
     width: windowWidth,
