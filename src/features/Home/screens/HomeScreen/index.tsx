@@ -1,8 +1,12 @@
 import React, {FC, useState} from 'react';
-import {SafeAreaView} from 'react-native';
+import {SafeAreaView, TouchableOpacity} from 'react-native';
+import MapViewCustom from 'react-native-map-clustering';
+import {Marker} from 'react-native-maps';
 import Animated from 'react-native-reanimated';
+import {Text} from 'react-native-svg';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import Loader from '../../../../components/Loader';
+import RangeSlider from '../../../../components/RangeSlider';
 import TextWrapper from '../../../../components/TextWrapper';
 import {StackParamList} from '../../../../models/navigation';
 import MapView from '../../components/MapView';
@@ -32,11 +36,27 @@ const HomeScreen: FC<Props> = ({navigation}) => {
         <Loader />
       ) : (
         <Animated.View style={[animatedOpacityStyle, styles.listContainer]}>
-          <MapView
+          {/* <MapView
             coordinates={pointCoordinates}
             onUserLocationUpdate={onUserLocationUpdate}
-          />
-          <SuggestInput />
+          /> */}
+          <RangeSlider />
+          {/* <MapViewCustom
+            style={{width: '100%', height: 500}}
+            region={{
+              latitude: 0,
+              longitude: 0,
+              latitudeDelta: 0,
+              longitudeDelta: 0,
+            }}
+          /> */}
+          {/* <SuggestInput /> */}
+          {/* <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Details');
+            }}>
+            <TextWrapper>To another screen</TextWrapper>
+          </TouchableOpacity> */}
         </Animated.View>
       )}
     </SafeAreaView>

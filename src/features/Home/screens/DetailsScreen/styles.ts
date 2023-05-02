@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
-  cardContainer: {
+  contentWrapper: {
     flex: 1,
     width: '100%',
     padding: dimensions.offset.normal,
