@@ -55,5 +55,9 @@
 	<false/>
 	<key>NSLocationUsageDescription</key>
 	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string>needs access to your Camera.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>needs access to your Microphone.</string>
 </dict>
 </plist>

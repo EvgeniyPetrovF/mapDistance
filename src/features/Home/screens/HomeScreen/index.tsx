@@ -5,6 +5,7 @@ import {Marker} from 'react-native-maps';
 import Animated from 'react-native-reanimated';
 import {Text} from 'react-native-svg';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import DatePicker from '../../../../components/DatePicker';
 import Loader from '../../../../components/Loader';
 import RangeSlider from '../../../../components/RangeSlider';
 import TextWrapper from '../../../../components/TextWrapper';
@@ -41,6 +42,7 @@ const HomeScreen: FC<Props> = ({navigation}) => {
             onUserLocationUpdate={onUserLocationUpdate}
           /> */}
           <RangeSlider />
+          <DatePicker />
           {/* <MapViewCustom
             style={{width: '100%', height: 500}}
             region={{

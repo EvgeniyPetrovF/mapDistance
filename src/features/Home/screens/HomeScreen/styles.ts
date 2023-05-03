@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     marginVertical: dimensions.offset.normal,
     paddingHorizontal: dimensions.offset.normal,
+    gap: dimensions.offset.normal,
   },
   listItemContainer: {
     width: windowWidth,

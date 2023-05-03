@@ -11,7 +11,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import {Camera, useCameraDevices} from 'react-native-vision-camera';
+// import {Camera, useCameraDevices} from 'react-native-vision-camera';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import CustomButton from '../../../../components/CustomButton';
 import Loader from '../../../../components/Loader';
@@ -23,46 +23,46 @@ import {styles} from './styles';
 type Props = NativeStackScreenProps<StackParamList, 'Details'>;
 
 const DetailsScreen: FC<Props> = () => {
-  const devices = useCameraDevices();
-  const device = devices.front;
-  const camera = useRef<Camera>(null);
-  const [tempPhoto, setTempPhoto] = useState();
+  // const devices = useCameraDevices();
+  // const device = devices.front;
+  // const camera = useRef<Camera>(null);
+  // const [tempPhoto, setTempPhoto] = useState();
 
-  useEffect(() => {
-    (async () => {
-      const cameraPermission = await Camera.getCameraPermissionStatus();
-      console.log(cameraPermission);
-      if (cameraPermission !== 'authorized') {
-        const newCameraPermission = await Camera.requestCameraPermission();
-      }
-      const newMicrophonePermission =
-        await Camera.requestMicrophonePermission();
+  // useEffect(() => {
+  //   (async () => {
+  //     const cameraPermission = await Camera.getCameraPermissionStatus();
+  //     console.log(cameraPermission);
+  //     if (cameraPermission !== 'authorized') {
+  //       const newCameraPermission = await Camera.requestCameraPermission();
+  //     }
+  //     const newMicrophonePermission =
+  //       await Camera.requestMicrophonePermission();
 
-      getAndroidPermissions([
-        PermissionsAndroid.PERMISSIONS.CAMERA,
-        PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
-        PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
-      ]);
-    })();
-  }, []);
-  console.log(device);
-  if (!device) {
-    return <Loader />;
-  }
+  //     getAndroidPermissions([
+  //       PermissionsAndroid.PERMISSIONS.CAMERA,
+  //       PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+  //       PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+  //     ]);
+  //   })();
+  // }, []);
+  // console.log(device);
+  // if (!device) {
+  //   return <Loader />;
+  // }
 
-  const photo = async () => {
-    console.log(camera.current);
-    const photo = await camera.current?.takePhoto({
-      qualityPrioritization: 'quality',
-      flash: 'on',
-    });
-    setTempPhoto(photo);
-    console.log(photo);
-  };
-  console.log(tempPhoto?.path);
+  // const photo = async () => {
+  //   console.log(camera.current);
+  //   const photo = await camera.current?.takePhoto({
+  //     qualityPrioritization: 'quality',
+  //     flash: 'on',
+  //   });
+  //   setTempPhoto(photo);
+  //   console.log(photo);
+  // };
+  // console.log(tempPhoto?.path);
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.contentWrapper}>
+      {/* <View style={styles.contentWrapper}>
         <Image
           source={{uri: `file://${tempPhoto?.path}`}}
           style={{width: '100%', height: 200}}
@@ -75,7 +75,7 @@ const DetailsScreen: FC<Props> = () => {
           isActive={true}
         />
         <CustomButton onPress={photo} label="Take Photo" />
-      </View>
+      </View> */}
     </SafeAreaView>
   );
 };
