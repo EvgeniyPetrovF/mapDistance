@@ -1,5 +1,9 @@
 import {Dimensions, StyleSheet} from 'react-native';
 import {colors, dimensions, text} from '../../../../constants';
+import {
+  scaleHorizontal,
+  scaleVertical,
+} from '../../../../utils/scaleStyleValues';
 
 const windowWidth = Dimensions.get('window').width;
 
@@ -35,5 +39,16 @@ export const styles = StyleSheet.create({
   },
   bottomOffset: {
     marginBottom: dimensions.offset.normal,
+  },
+  checkbox: {
+    position: 'absolute',
+    backgroundColor: colors.white,
+    width: scaleHorizontal(40),
+    aspectRatio: 1,
+    borderWidth: 1,
+    borderColor: colors.gray,
+  },
+  carImage: {
+    aspectRatio: 1.3,
   },
 });
