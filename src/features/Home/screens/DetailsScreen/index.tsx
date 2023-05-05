@@ -14,6 +14,7 @@ import {
 // import {Camera, useCameraDevices} from 'react-native-vision-camera';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import CustomButton from '../../../../components/CustomButton';
+import DatePicker from '../../../../components/DatePicker';
 import Loader from '../../../../components/Loader';
 import TextWrapper from '../../../../components/TextWrapper';
 import {StackParamList} from '../../../../models/navigation';
@@ -22,7 +23,12 @@ import {styles} from './styles';
 
 type Props = NativeStackScreenProps<StackParamList, 'Details'>;
 
-const DetailsScreen: FC<Props> = () => {
+const DetailsScreen: FC<Props> = ({route}) => {
+  const {
+    params: {bookItem},
+  } = route;
+
+  const [date, setDate] = useState(new Date());
   // const devices = useCameraDevices();
   // const device = devices.front;
   // const camera = useRef<Camera>(null);
@@ -62,8 +68,8 @@ const DetailsScreen: FC<Props> = () => {
   // console.log(tempPhoto?.path);
   return (
     <SafeAreaView style={styles.container}>
-      {/* <View style={styles.contentWrapper}>
-        <Image
+      <View style={styles.contentWrapper}>
+        {/* <Image
           source={{uri: `file://${tempPhoto?.path}`}}
           style={{width: '100%', height: 200}}
         />
@@ -73,9 +79,15 @@ const DetailsScreen: FC<Props> = () => {
           style={{width: '100%', height: 300}}
           device={device}
           isActive={true}
+        /> */}
+        <DatePicker date={date} setDate={setDate} />
+        <CustomButton
+          onPress={() => {
+            bookItem(date);
+          }}
+          label="Save"
         />
-        <CustomButton onPress={photo} label="Take Photo" />
-      </View> */}
+      </View>
     </SafeAreaView>
   );
 };

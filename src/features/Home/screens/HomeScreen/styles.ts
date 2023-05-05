@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     marginVertical: dimensions.offset.normal,
     paddingHorizontal: dimensions.offset.normal,
     gap: dimensions.offset.normal,
+    width: '100%',
   },
   listItemContainer: {
     width: windowWidth,
@@ -50,5 +51,37 @@ export const styles = StyleSheet.create({
   },
   carImage: {
     aspectRatio: 1.3,
+  },
+  servicesContainer: {
+    justifyContent: 'space-between',
+    gap: dimensions.offset.normalPlus,
+    margin: dimensions.offset.small,
+  },
+  columnWrapper: {
+    justifyContent: 'space-between',
+    gap: scaleHorizontal(20),
+  },
+
+  bookContainer: {
+    flex: 1,
+    aspectRatio: 1,
+  },
+  image: {
+    aspectRatio: 1,
+  },
+  bookWrapper: {
+    flex: 1,
+    aspectRatio: 1,
+    backgroundColor: colors.white,
+    padding: dimensions.offset.normal,
+    shadowColor: colors.black,
+    borderRadius: dimensions.borderRadius.big,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
   },
 });
