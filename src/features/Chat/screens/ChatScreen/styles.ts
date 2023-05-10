@@ -1,9 +1,6 @@
 import {Dimensions, StyleSheet} from 'react-native';
 import {colors, dimensions, text} from '../../../../constants';
-import {
-  scaleHorizontal,
-  scaleVertical,
-} from '../../../../utils/scaleStyleValues';
+import {scaleHorizontal} from '../../../../utils/scaleStyleValues';
 
 const windowWidth = Dimensions.get('window').width;
 
@@ -53,29 +50,28 @@ export const styles = StyleSheet.create({
     aspectRatio: 1.3,
   },
   servicesContainer: {
-    justifyContent: 'space-between',
+    flexGrow: 1,
     gap: dimensions.offset.normalPlus,
-    margin: dimensions.offset.small,
+    margin: dimensions.offset.tiny,
   },
-  columnWrapper: {
-    justifyContent: 'space-between',
-    gap: scaleHorizontal(20),
+  messageContainer: {
+    borderWidth: 1,
+    borderColor: colors.gray,
+    borderRadius: dimensions.borderRadius.small,
+    padding: dimensions.offset.small,
   },
 
   bookContainer: {
     flex: 1,
     aspectRatio: 1,
   },
-  image: {
-    aspectRatio: 1,
-  },
-  bookWrapper: {
-    flex: 1,
-    aspectRatio: 1,
+  tileWrapper: {
     backgroundColor: colors.white,
     padding: dimensions.offset.normal,
-    shadowColor: colors.black,
     borderRadius: dimensions.borderRadius.big,
+  },
+  shadow: {
+    shadowColor: colors.black,
     shadowOffset: {
       width: 0,
       height: 2,
