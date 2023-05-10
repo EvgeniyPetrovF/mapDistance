@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
 import {Slider} from '@miblanchard/react-native-slider';
 import TextWrapper from '../TextWrapper';
+import {styles} from './styles';
 
 type Props = {};
 
@@ -62,19 +63,3 @@ const RangeSlider = (props: Props) => {
 };
 
 export default RangeSlider;
-
-const styles = StyleSheet.create({
-  labelsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  thumbContainer: {},
-  thumb: {
-    backgroundColor: 'white',
-    borderRadius: 50,
-    width: 40,
-    height: 40,
-    borderWidth: 2,
-    borderColor: 'grey',
-  },
-});

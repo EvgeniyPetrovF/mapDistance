@@ -58,3 +58,10 @@ export interface Metadata {
 export interface Reading {
   ja_kana: string;
 }
+
+export interface IMessage {
+  id: number;
+  userName: string;
+  userId: number;
+  message: string;
+}
