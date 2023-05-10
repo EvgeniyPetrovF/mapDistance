@@ -44,7 +44,9 @@ type Props = NativeStackScreenProps<StackParamList, 'Home'>;
 // const carImage = require('../../../../assets/images/car.png');
 
 // const booksSeeds = [
-//   {id: 0, title: 'Book0', author: 'Apold', bookingTime: null},
+//   {
+//     id: 0, title: 'Book0', author: 'Apold', bookingTime: null,
+//   },
 //   {
 //     id: 1,
 //     title: 'Book1',
