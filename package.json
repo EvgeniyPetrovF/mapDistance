@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@miblanchard/react-native-slider": "^2.3.1",
+    "@react-native-firebase/app": "^17.4.3",
+    "@react-native-firebase/database": "^17.4.3",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "@rnmapbox/maps": "rnmapbox/maps#main",

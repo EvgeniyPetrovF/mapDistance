@@ -3,6 +3,7 @@ import {
   createNativeStackNavigator,
   NativeStackNavigationOptions,
 } from '@react-navigation/native-stack';
+import ChatScreen from '../../features/Chat/screens/ChatScreen';
 import DetailsScreen from '../../features/Home/screens/DetailsScreen';
 import HomeScreen from '../../features/Home/screens/HomeScreen';
 import {StackParamList} from '../../models/navigation';
@@ -18,6 +19,7 @@ const AppStack = () => {
   return (
     <Stack.Navigator initialRouteName="Home" screenOptions={options.app}>
       <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Chat" component={ChatScreen} />
       <Stack.Screen
         name="Details"
         component={DetailsScreen}
